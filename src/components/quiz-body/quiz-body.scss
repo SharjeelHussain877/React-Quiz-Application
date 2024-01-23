@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(https://img.freepik.com/premium-vector/question-mark-copy-space-background-yellow-quiz-banner-templae_343173-230.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705622400&semt=ais);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+.warning-last-minute {
+  border-radius: 10px;
+  color: #fff;
+  background-color: red;
+  padding: 8px 12px;
+  margin: 10px 0px;
+}
+
+.color {
+  background-color: #fffb24;
+}
+.time {
+  padding: 8px 12px;
+  background-color: #fffb24d0;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.596));
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+.content {
+  color: white;
+  z-index: 1;
+}
+
+
+.question-section {
+  width: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e3df00bc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.question-section h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.radio-group {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; // Added flex-wrap for smaller screens
+}
+
+.option {
+  font-size: 16px;
+  font-family: "open sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.radio-button {
+  width: calc(50% - 15px);
+  margin-bottom: 15px;
+  display: block;
+  border: 1px solid #d9d9d9;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &.ant-radio-button-wrapper-checked {
+    background-color: #52c41a;
+    color: #fff;
+    border-color: #52c41a;
+  }
+}
+
+.next-button {
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+.timer-warning {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.time-remaining {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.result-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.result-success {
+  color: #52c41a;
+}
+
+.result-error {
+  color: #f5222d;
+}
+
+.btn-div {
+  text-align: end;
+}
+
+@media (min-width: 768px) {
+  .radio-button {
+    width: calc(50% - 15px);
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .question-section {
+    width: 80%;
+    min-width: 80%;
+    max-width: 80%;
+  }
+}
+@media (max-width: 546px) {
+  .question-section {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+    }
+  }
+  .result {
+    .quiz-status {
+      width: 100%;
+      }
+  }
+}
+
+.result {
+  background-color:  #f2f2f2; 
+}
